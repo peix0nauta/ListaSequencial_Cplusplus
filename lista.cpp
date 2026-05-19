@@ -371,3 +371,34 @@ void Lista::MergeSort(int inicio, int fim) {
         ExibirMetricas();
     }
 }
+
+void Lista :: BuscaBinaria(){
+    
+    ZerarMetricas();
+
+    long long rg;
+    bool encontrou = false;
+    int inicio = 0,fim = total-1;
+    cout<<"qual RG vc quer encontrar?";cin >> rg;
+
+    while(inicio <= fim && !encontrou){
+
+        int meio = inicio + (fim - inicio) / 2;
+        long long rgMeio = stoull(string(listaDePessoas[meio].GetRG()));
+        if(rg > rgMeio){
+                inicio = meio+1;
+                Cn++;
+        }
+        else if(rg < rgMeio){
+                fim = meio-1;
+                Cn++;
+        }
+        else if(rg == rgMeio){
+            cout<< "ENCONTRADO:"<<listaDePessoas[meio].Getnome()<<endl;
+            encontrou = true;
+            Cn++;
+        }
+    }
+
+    ExibirMetricas();
+}

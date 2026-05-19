@@ -22,7 +22,8 @@ void Menuprincipal(Lista &minhaLista){
                  "4.Ordenar"<<endl<<
                  "5.Salva"<<endl<<
                  "6.procurar pelo CPF"<<endl <<
-                "7.sair"<<endl ;
+                 "7.Busca Binaria"<<endl<<
+                 "8.sair"<<endl ;
         cin >> opcao;
 
         switch(opcao) {
@@ -32,8 +33,9 @@ void Menuprincipal(Lista &minhaLista){
             case 4: subMenuOrdenar(minhaLista); break;
             case 5: minhaLista.SalvaLista(); break;
             case 6: minhaLista.ProcuraRG(); break;
+            case 7: minhaLista.BuscaBinaria(); break;
         }
-    } while(opcao != 7);
+    } while(opcao != 8);
 }
 
 void subMenuInserir(Lista &minhaLista) {

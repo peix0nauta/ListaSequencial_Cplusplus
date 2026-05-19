@@ -31,4 +31,5 @@ class Lista {
     void ShellSort();
     void QuickSort(int inicio =-1, int fim =-1);
     void MergeSort(int inicio = -1, int fim = -1);
+    void BuscaBinaria();
 };
